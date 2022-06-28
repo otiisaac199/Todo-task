@@ -14,6 +14,36 @@ $bg-color: #98b5ff;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   flex-shrink: 0;
 }
+
+// search
+.searchinput {
+  position: absolute;
+  z-index: 10000;
+  top: 60px;
+  right: 80px;
+  width: 23%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid $color;
+  border-radius: 20px;
+  background: $color;
+  color: $bg-color;
+  font-size: 1.1rem;
+  transition: 0.5s;
+  display: none;
+  &.active {
+    display: block;
+  }
+  &:focus {
+    outline: unset;
+    width: 70%;
+  }
+  &::placeholder {
+    color: $bg-color;
+  }
+}
+
+// entry
 .entrymodal-cont {
   width: 100%;
   height: 100%;
@@ -198,6 +228,7 @@ body {
 }
 
 .todohead-title {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
