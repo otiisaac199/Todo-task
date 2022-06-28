@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link rel="stylesheet" href="icons-1.8.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="entrymodal-cont">
+      <h1>Todo Task</h1>
+      <div class="entry-modal">
+        <h3>Please, enter your First name</h3>
+        <div class="entry-inp">
+          <input type="text" placeholder="Enter name" class="entry-main-inp" />
+          <i class="bi bi-box-arrow-in-right entryBtn"></i>
+        </div>
+      </div>
+    </div>
+    <div class="page-container">
+      <div class="menu-container">
+        <div class="icon-nav">
+          <i class="bi bi-chevron-left chevron"></i>
+        </div>
+        <div class="pic-nav">
+          <div></div>
+        </div>
+        <div class="menu-person-name">
+          <h1 class="person-name"><span class="main-name"></span></h1>
+        </div>
+        <ul class="main-menu">
+          <li><i class="bi bi-bookmark"></i><a href="#">Tasks</a></li>
+          <li><i class="bi bi-grid"></i><a href="#">Category</a></li>
+          <li><i class="bi bi-app-indicator"></i><a href="#">Analytics</a></li>
+        </ul>
+        <div class="menu-footer">
+          <p>Good</p>
+          <h3>Consistancy</h3>
+        </div>
+      </div>
+      <div class="todo-container">
+        <div class="todohead-title">
+          <i class="bi bi-list list"></i>
+          <div class="right-icon">
+            <i class="bi bi-search"></i>
+            <i class="bi bi-bell"></i>
+          </div>
+        </div>
+        <h1 class="title">What's up, <span class="first-name"></span></h1>
+
+        <!-- Category -->
+        <div class="todo-category">
+          <p>CATEGORIES</p>
+          <div class="category-content">
+            <div class="category">
+              <p class="category-task">40 tasks</p>
+              <h3>Business</h3>
+              <div class="category-range">
+                <div class="category-range-cont"></div>
+              </div>
+            </div>
+
+            <div class="category">
+              <p class="category-task">40 tasks</p>
+              <h3>Business</h3>
+              <div class="category-range">
+                <div class="category-range-cont"></div>
+              </div>
+            </div>
+
+            <div class="category">
+              <p class="category-task">40 tasks</p>
+              <h3>Business</h3>
+              <div class="category-range">
+                <div class="category-range-cont"></div>
+              </div>
+            </div>
+
+            <div class="category">
+              <p class="category-task">40 tasks</p>
+              <h3>Business</h3>
+              <div class="category-range">
+                <div class="category-range-cont"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tasks -->
+        <div class="todo-task">
+          <p>TODAY'S TASKS</p>
+          <div class="todo-task-content" style="cursor: pointer">
+            <h2 class="pre-task-message cur">Click to add task</h2>
+          </div>
+        </div>
+
+        <!-- addtask -->
+
+        <div class="addtskbtn cur">
+          <i class="bi bi-plus"></i>
+        </div>
+        <div class="modal-cont">
+          <div class="addtask-modal">
+            <h3>ADD TASK</h3>
+            <div class="addTask-inp">
+              <input
+                type="text"
+                placeholder="Write your task here"
+                class="add-task-inp"
+              />
+              <i class="bi bi-box-arrow-right cursor"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

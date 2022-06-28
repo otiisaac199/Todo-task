@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="icons-1.8.3/font/bootstrap-icons.css" />
+    <style>
+      .list {
+        font-size: 2rem;
+        cursor: pointer;
+      }
+      .navbar li {
+        font-size: 2rem;
+        list-style-type: none;
+        color: grey;
+        cursor: pointer;
+        transition: 0.2s;
+        margin: 15px 0;
+      }
+      .navbar li:hover {
+        color: #fff;
+      }
+      .navbar {
+        position: fixed;
+        top: 25px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 0;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        transition: 0.8s;
+      }
+      .navbar.active {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <i class="bi bi-list list"></i>
+
+    <ul class="navbar">
+      <li>Home</li>
+      <li>Content</li>
+      <li>Contact</li>
+      <li>FAQ</li>
+      <li>Services</li>
+    </ul>
+
+    <script>
+      let hamburger = document.querySelector(".list");
+      let menuNav = document.querySelector(".navbar");
+      let body = document.body;
+
+      hamburger.addEventListener("click", () => {
+        menuNav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
