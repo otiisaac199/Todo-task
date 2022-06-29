@@ -458,3 +458,15 @@ body {
     transform: scale(1);
   }
 }
+
+// Media screen
+
+@media screen and (max-width: 340px) {
+  .title {
+    width: 85% !important;
+  }
+  .page-container {
+    width: 98%;
+    transform: scale(0.94);
+  }
+}
