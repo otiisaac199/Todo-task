@@ -21,8 +21,8 @@
   background: #031956;
   color: #98b5ff;
   font-size: 1.1rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   display: none;
 }
 
@@ -54,7 +54,7 @@
 .entrymodal-cont {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   background: #7b96e8;
   top: 0;
   z-index: 100;
@@ -72,11 +72,15 @@
       -ms-flex-align: center;
           align-items: center;
   color: #031956;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .entrymodal-cont h1 {
   margin-bottom: 30px;
-  font-size: 4rem;
+  font-size: 3rem;
+  text-align: center;
 }
 
 .entrymodal-cont.active {
@@ -272,6 +276,7 @@
 body {
   height: 100%;
   background-color: #98b5ff;
+  position: unset;
 }
 
 .page-container {
@@ -518,7 +523,7 @@ body {
 }
 
 .modal-cont {
-  position: fixed;
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,7 +552,9 @@ body {
 }
 
 .addtask-modal {
-  width: 70%;
+  position: absolute;
+  bottom: 10pc;
+  width: 60%;
   border-radius: 10px;
   background: #031956;
   padding: 20px 15px;
@@ -555,8 +562,8 @@ body {
   color: #fff;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: 0.7s;
-  transition: 0.7s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .addtask-modal h3 {
@@ -576,12 +583,13 @@ body {
 }
 
 .addtask-modal .addTask-inp input {
-  border: unset;
+  border: 1px solid #98b5ff;
   color: #fff;
   width: 85%;
   padding: 8px 0 8px 5px;
   border-radius: 10px;
   background-color: unset;
+  margin-right: 10px;
 }
 
 .addtask-modal .addTask-inp input::-webkit-input-placeholder {
@@ -602,6 +610,10 @@ body {
 .addtask-modal .addTask-inp input::placeholder {
   font-size: 1rem;
   color: #fff;
+}
+
+.addtask-modal .addTask-inp input:focus {
+  outline: unset;
 }
 
 .addtask-modal .addTask-inp i {

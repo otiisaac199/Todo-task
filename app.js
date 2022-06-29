@@ -37,7 +37,7 @@ const preTaskMessage = document.querySelector(".pre-task-message");
 createTask.addEventListener("click", createTaskFunc);
 function createTaskFunc() {
   addTaskInputValue = addTaskInput.value;
-  if (addTaskInputValue === " ") alert("Please, Create a Task");
+  if (addTaskInputValue == " ") alert("Please, Create a Task");
   else {
     // assignments of variables needed
     preTaskMessage.style.display = "none";
@@ -53,13 +53,10 @@ function createTaskFunc() {
     checkBox.setAttribute("class", "checkbox");
     mainTodoTask.setAttribute("class", "main-todo-task");
     taskTxt.setAttribute("class", "task-txt");
+    taskTxt.setAttribute("contenteditable", true);
     checkBoxDiv.setAttribute("class", "check-box-div");
     deleteIcon.setAttribute("class", "bi");
     deleteIcon.setAttribute("class", "bi-trash3");
-
-    deleteIcon.addEventListener("click", () => {
-      mainTodoTask.style.display = "none";
-    });
 
     // divs Appended
     taskTxt.textContent = addTaskInputValue;
@@ -69,6 +66,11 @@ function createTaskFunc() {
 
     addtaskModal.classList.remove("active");
     modalCont.classList.remove("active");
+
+    // delete button
+    deleteIcon.addEventListener("click", () => {
+      mainTodoTask.style.display = "none";
+    });
   }
 
   const search = document.querySelector(".search");
@@ -80,13 +82,11 @@ function createTaskFunc() {
     console.log(mainer);
 
     const todos = mainer.filter((el) => {
-      return search.value == taskTxt.textContent;
+      // return search.value == taskTxt.textContent;
+      console.log("Filtering");
     });
   });
 }
-// search filter
-
-//
 
 // The Enter key button click to run the createTaskFunc()
 addTaskInput.addEventListener("keydown", (event) => {

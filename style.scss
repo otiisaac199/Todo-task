@@ -29,7 +29,7 @@ $bg-color: #98b5ff;
   background: $color;
   color: $bg-color;
   font-size: 1.1rem;
-  transition: 0.5s;
+  transition: 0.2s;
   display: none;
   &.active {
     display: block;
@@ -47,7 +47,7 @@ $bg-color: #98b5ff;
 .entrymodal-cont {
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: absolute;
   background: $color_3;
   top: 0;
   z-index: 100;
@@ -56,9 +56,12 @@ $bg-color: #98b5ff;
   justify-content: center;
   align-items: center;
   color: $color;
+  padding: 0 10px;
+  box-sizing: border-box;
   h1 {
     margin-bottom: 30px;
-    font-size: 4rem;
+    font-size: 3rem;
+    text-align: center;
   }
   &.active {
     width: 0;
@@ -194,6 +197,7 @@ $bg-color: #98b5ff;
 body {
   height: 100%;
   background-color: $bg-color;
+  position: unset;
 }
 .page-container {
   width: 310px;
@@ -387,7 +391,7 @@ body {
 }
 
 .modal-cont {
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -406,14 +410,16 @@ body {
   animation: magnify 0.4s ease-in forwards;
 }
 .addtask-modal {
-  width: 70%;
+  position: absolute;
+  bottom: 10pc;
+  width: 60%;
   border-radius: 10px;
   background: $color;
   padding: 20px 15px;
   text-align: center;
   color: #fff;
   transform: scale(0);
-  transition: 0.7s;
+  transition: 0.5s;
   h3 {
     margin-bottom: 10px;
   }
@@ -422,15 +428,19 @@ body {
     align-items: center;
     justify-content: center;
     input {
-      border: unset;
+      border: 1px solid $bg-color;
       color: #fff;
       width: 85%;
       padding: 8px 0 8px 5px;
       border-radius: 10px;
       background-color: unset;
+      margin-right: 10px;
       &::placeholder {
         font-size: 1rem;
         color: #fff;
+      }
+      &:focus {
+        outline: unset;
       }
     }
     i {
