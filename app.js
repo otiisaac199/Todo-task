@@ -96,7 +96,7 @@ search.addEventListener("click", () => {
     searchInputValue = searchInput.value;
     const fd = mainerID.filter((each_el) => {
       let each = each_el.childNodes[0].childNodes[1].textContent;
-      if (each.toLowerCase().includes(searchInputValue)) {
+      if (each.toLowerCase().trim().includes(searchInputValue)) {
         return each_el;
       }
     });
